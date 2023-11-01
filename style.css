@@ -1,0 +1,98 @@
+body {
+    font-family: sans-serif;
+    background: #dedede;
+    padding: 48px;
+}
+
+h1 {
+    text-align: center;
+    display: inline-block;
+    font-size: 72px;
+}
+
+#clock {
+    width: 300px;
+    height: 300px;
+    border: 20px solid rgb(20, 220, 235);
+    border-radius: 50%;
+    padding: 20px;
+    background: #fefbf2;
+    box-shadow: 0px 0px 10px black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+}
+
+#clock::before {
+    position: absolute;
+    content: '';
+    height: 130px;
+    width: 3px;
+    background-color: black;
+    border: 3px solid black;
+    border-radius: 5px;
+    animation: spin 7s linear infinite;
+    transform-origin: 0 0;
+    left: 20%;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(1deg);
+    }
+
+    1% {
+        transform: rotate(2deg);
+    }
+
+    2% {
+        transform: rotate(3deg);
+    }
+
+    3% {
+        transform: rotate(4deg);
+    }
+
+    4% {
+        transform: rotate(5deg);
+    }
+
+    5% {
+        transform: rotate(6deg);
+    }
+
+    6% {
+        transform: rotate(7deg);
+    }
+
+    7% {
+        transform: rotate(6deg);
+    }
+
+    /* 100% {
+      transform: rotate(-180deg);
+    } */
+}
+
+.clock-digit {
+    position: inherit;
+    font-family: 'sans-serif';
+    font-weight: bold;
+}
+
+.upper-digit {
+    text-align: center;
+}
+
+.lower-digit {
+    text-align: center;
+}
+
+.middle-digits {
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
